@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit2 C2</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #main{
+        width: 80%;
+        margin: auto;
+      }
+      #main>#banner{
+        width: 92.5%;
+        padding: 0px 40px;
+        border-radius: 20px;
+        background-color: rgb(25, 23, 151);
+        color: white;
+        height: 250px;
+        display: flex;
+        justify-content: space-between;
+        
+      }
+      #main>#banner>div{
+        width: 38%;
+      }
+      #main>#banner>div>h2{
+        margin-bottom: 8px;
+      }
+      #main>#banner>div>p{
+        margin-bottom: 7px;
+      }
+      #main>#banner>div>button{
+        border-width: 0px;
+        width: 90px;
+        height: 26px;
+        border-radius: 8px;
+      }
+      #main>#banner>div:first-child{
+        margin-top: 60px;
+      }
+      #main>#banner>div:last-child{
+        margin: 7px;
+        margin-right: 20px;
+        margin-bottom: 0px;
+      }
+      #main>#banner>div:last-child>img{
+        width: 100%;
+      }
+
+      #main>#services{
+      
+        width: 100%;
+        display: grid;
+        margin-top: 40px;
+        grid-template-columns: repeat(6,160px);
+        grid-template-rows: repeat(1,240px);
+        justify-content: space-between;
+        align-content: space-around;
+      }
+      #main>#services>div{
+       
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      #main>#services>div>h4{
+        margin: 20px 20px 5px 20px;
+      }
+      #main>#services>div>p{
+        margin: 0px 20px;
+        font-size: 13px;
+        color: gray;
+      }
+      #main>#services>div>div{
+        margin-top: -3px;
+        background-color: rgb(135, 187, 235);
+        width: 100%;
+        height: 60%;
+      }
+
+      #main>#services>div>div>img{
+        width: 73%;
+        display: block;
+        margin: auto;
+        margin-top: 3px;
+        margin-bottom: 0px;
+      }
+
+      #works>div{
+        
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(4,248px);
+        grid-template-rows: repeat(2,auto);
+        justify-content: space-between;
+      }
+      #works>h1{
+        text-align: center;
+        margin-top: 40px;
+        font-size: 25px;
+      }
+      #works>p{
+        text-align: center;
+        font-size: 13px;
+        margin-bottom: 25px;
+      }
+
+      #works>div>div{
+        margin-bottom: 50px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; -8px;
+      }
+      #works>div>div>h4{
+        margin-left: 5px;
+      }
+      #works>div>div>p{
+        font-size: 12px;
+        margin-left: 5px;
+        margin-bottom: 20px;
+      }
+      #works>div>div>img{
+        width: 100%;
+      }
+      /* Medium Screen */
+      @media only screen and (min-width: 500px) and (max-width: 768px) {
+        #banner{
+          flex-direction: column;
+        }
+        #main>#services{
+          grid-template-columns: repeat(3,160px);
+          grid-template-rows: repeat(2,auto);
+          justify-content: space-between;
+          align-content: space-around;
+        }
+        #main>#services>div{
+          margin-bottom: 25px;
+        }
+        #main>#services>div>p{
+          margin-bottom: 25px;
+        }
+        #main>#services>div>div>img{
+          width: 60%;
+        }
+        #works>div{
+          grid-template-columns: repeat(2,150px);
+          grid-template-rows: repeat(4,auto);
+          justify-content: space-around;
+        }
+      }
+
+      /* Small Screen */
+      @media only screen and (min-width: 320px) and (max-width: 499px) {
+        #banner{
+          flex-direction: column;
+        }
+        #main>#services{
+          grid-template-columns: repeat(2,80px);
+          grid-template-rows: repeat(3,auto);
+          justify-content: space-around
+        }
+        #main>#services>div{
+          margin-bottom: 10px;
+        }
+        #main>#services>div>div>img{
+          width: 60%;
+        }
+        #main>#services>div>h4{
+          font-size: 10px;
+          margin: 1px 2px;
+        }
+        #main>#services>div>p{
+          font-size: 8px;
+          margin: 1px 2px;
+        }
+        #works>div{
+          grid-template-columns: repeat(1,100px);
+          grid-template-rows: repeat(4,auto);
+          justify-content: space-around;
+        }
+        #works>h1{
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="banner">
+        <!-- Here should be 2 divs one for the banner heading and button and the second is for banner image -->
+        <div>
+          <h2>You are in safe hands</h2>
+          <p>Choose the experts in end to end surgical care</p>
+          <button>Know More</button>
+        </div>
+        <div>
+          <img src="https://www.practostatic.com/consumer-home/practo-care/1631634827/dweb_hero_banner.png" alt="error">
+        </div>
+      </div>
+      <div id="services">
+        <!-- Here should be 6 divs. All of them should be in a single line for large screen. For medium and large screen refer to question statement -->
+        <div>
+          <div>
+            <img src="https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_instant_video_consulation.png" alt="error">
+          </div>
+          <h4>Instant Video Consulation</h4>
+          <p>Connect within 60secs</p>
+        </div>
+        <div>
+          <div>
+            <img src="https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_instant_video_consulation.png" alt="error">
+          </div>
+          <h4>Instant Video Consulation</h4>
+          <p>Connect within 60secs</p>
+        </div>
+        <div>
+          <div>
+            <img src="https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_instant_video_consulation.png" alt="error">
+          </div>
+          <h4>Instant Video Consulation</h4>
+          <p>Connect within 60secs</p>
+        </div>
+        <div>
+          <div>
+            <img src="https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_instant_video_consulation.png" alt="error">
+          </div>
+          <h4>Instant Video Consulation</h4>
+          <p>Connect within 60secs</p>
+        </div>
+        <div>
+          <div>
+            <img src="https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_instant_video_consulation.png" alt="error">
+          </div>
+          <h4>Instant Video Consulation</h4>
+          <p>Connect within 60secs</p>
+        </div>
+        <div>
+          <div>
+            <img src="https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_instant_video_consulation.png" alt="error">
+          </div>
+          <h4>Instant Video Consulation</h4>
+          <p>Connect within 60secs</p>
+        </div>
+      </div>
+      <div id="works">
+        <h1>Book an appointment for an in-clinic consultation</h1>
+        <p>Find experienced doctors across all specialties</p>
+        <div>
+          <!-- Here should be 8 divs. They should be in 4 colums and two rows for large screen.For medium and large screen refer to question statement -->
+          <div>
+            <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg" alt="">
+            <h4>Dentist</h4>
+            <p>Teethingtrouble? Schedule a dental checkup </p>
+          </div>
+          <div>
+            <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg" alt="">
+            <h4>Dentist</h4>
+            <p>Teethingtrouble? Schedule a dental checkup </p>
+          </div>
+          <div>
+            <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg" alt="">
+            <h4>Dentist</h4>
+            <p>Teethingtrouble? Schedule a dental checkup </p>
+          </div>
+          <div>
+            <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg" alt="">
+            <h4>Dentist</h4>
+            <p>Teethingtrouble? Schedule a dental checkup </p>
+          </div>
+          <div>
+            <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg" alt="">
+            <h4>Dentist</h4>
+            <p>Teethingtrouble? Schedule a dental checkup </p>
+          </div>
+          <div>
+            <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg" alt="">
+            <h4>Dentist</h4>
+            <p>Teethingtrouble? Schedule a dental checkup </p>
+          </div>
+          <div>
+            <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg" alt="">
+            <h4>Dentist</h4>
+            <p>Teethingtrouble? Schedule a dental checkup </p>
+          </div>
+          <div>
+            <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg" alt="">
+            <h4>Dentist</h4>
+            <p>Teethingtrouble? Schedule a dental checkup </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
